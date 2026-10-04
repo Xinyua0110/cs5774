@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Protein and RNA complex schematic</title>
+  <desc id="desc">A blue folded protein shape beside a teal RNA strand with highlighted contact points.</desc>
+  <rect width="720" height="420" rx="34" fill="#eef5ff"/>
+  <path d="M118 237C58 171 121 69 211 104c49 19 50 76 95 86 52 12 67-50 124-32 68 21 60 122-2 153-55 28-99-10-148 8-73 26-119-36-162-82Z" fill="#3271d9" opacity=".92"/>
+  <path d="M489 69c-82 61-14 107 35 133 76 40 45 107-43 148" fill="none" stroke="#0e7490" stroke-width="26" stroke-linecap="round"/>
+  <path d="M544 69c-82 61-14 107 35 133 76 40 45 107-43 148" fill="none" stroke="#2fb4b7" stroke-width="18" stroke-linecap="round"/>
+  <g fill="#ffd166" stroke="#14213d" stroke-width="4"><circle cx="418" cy="191" r="12"/><circle cx="448" cy="215" r="12"/><circle cx="455" cy="251" r="12"/><circle cx="430" cy="278" r="12"/></g>
+</svg>

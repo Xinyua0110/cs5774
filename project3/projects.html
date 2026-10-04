@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse xBind prediction projects">
+  <title>xBind | Projects</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">xBind</a>
+    <nav class="primary-nav" aria-label="Primary navigation"><ul>
+      <li><a href="index.html">Home</a></li><li><a aria-current="page" href="projects.html">Projects</a></li>
+      <li><a href="add-project.html">New project</a></li><li class="account-summary"><span aria-label="Signed in as Xinyu Wang, researcher">Xinyu Wang · Researcher</span></li>
+    </ul></nav>
+    <form class="site-search" action="search-results.html" method="get"><label class="visually-hidden" for="site-search-projects">Search xBind projects</label><input id="site-search-projects" name="q" type="search" placeholder="Try RNA" required><button type="submit">Search</button></form>
+  </header>
+
+  <main id="main-content">
+    <div class="page-heading">
+      <div><p class="eyebrow">Project library</p><h1>Prediction projects</h1><p>Search and review binding-site prediction work.</p></div>
+      <a class="button button-primary" href="add-project.html">New project</a>
+    </div>
+
+    <form class="filter-panel" action="projects.html" method="get">
+      <div class="field field-wide"><label for="search">Search projects</label><input id="search" name="search" type="search" placeholder="Project name, sequence ID, or owner"></div>
+      <div class="field"><label for="partner-filter">Partner</label><select id="partner-filter" name="partner"><option>All types</option><option>Protein</option><option>DNA</option><option>RNA</option></select></div>
+      <div class="field"><label for="status-filter">Status</label><select id="status-filter" name="status"><option>All statuses</option><option>Complete</option><option>Running</option><option>Queued</option><option>Failed</option><option>Draft</option></select></div>
+      <div class="field"><label for="sort">Sort by</label><select id="sort" name="sort"><option>Recently updated</option><option>Project name</option><option>Status</option></select></div>
+      <div class="filter-actions"><button type="submit">Apply filters</button><a class="button button-secondary" href="projects.html">Clear filters</a></div>
+    </form>
+
+    <section aria-labelledby="project-table-title">
+      <h2 id="project-table-title" class="visually-hidden">Project results</h2>
+      <div class="table-wrap">
+        <table id="project-table">
+          <thead><tr><th scope="col">Project</th><th scope="col">Partner</th><th scope="col">Status</th><th scope="col">Updated</th><th scope="col">Project owner</th><th scope="col">Actions</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">RNA-binding pilot</th><td>RNA</td><td><span class="status status-complete">Complete</span></td><td>Sep 25, 2026</td><td>Xinyu Wang</td><td><a href="detail.html">Open</a> <button class="text-button compare-button" type="button">Compare</button></td></tr>
+            <tr><th scope="row">DNA interface test</th><td>DNA</td><td><span class="status status-running">Running · 64%</span></td><td>Sep 24, 2026</td><td>Xinyu Wang</td><td><a href="detail.html">View status</a> <button class="text-button compare-button" type="button">Compare</button></td></tr>
+            <tr><th scope="row">Protein partner scan</th><td>Protein</td><td><span class="status status-queued">Queued · #2</span></td><td>Sep 22, 2026</td><td>Xinyu Wang</td><td><a href="detail.html">View status</a> <button class="text-button compare-button" type="button">Compare</button></td></tr>
+            <tr><th scope="row">RBP validation</th><td>RNA</td><td><span class="status status-complete">Complete</span></td><td>Sep 18, 2026</td><td>Dr. Lee</td><td><a href="detail.html">Open</a> <button class="text-button compare-button" type="button">Compare</button></td></tr>
+            <tr><th scope="row">Mutant comparison</th><td>Protein</td><td><span class="status status-failed">Failed</span></td><td>Sep 16, 2026</td><td>Xinyu Wang</td><td><a href="add-project.html">Fix input</a> <button class="text-button compare-button" type="button">Compare</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <aside id="comparison-tray" class="panel comparison-tray" aria-live="polite"><h2>Comparison selection</h2><p>Select projects with the Compare buttons above.</p><ul></ul></aside>
+  </main>
+  <footer class="site-footer"><p><strong>xBind</strong> · Research prototype for binding-site prediction</p><p>Questions? <a href="mailto:xbind-support@example.edu">Contact support</a></p></footer>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

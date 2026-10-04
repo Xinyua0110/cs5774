@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="xBind binding-site prediction workspace">
+  <title>xBind | Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="xBind home">xBind</a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a aria-current="page" href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="add-project.html">New project</a></li>
+        <li class="account-summary"><span aria-label="Signed in as Xinyu Wang, researcher">Xinyu Wang · Researcher</span></li>
+      </ul>
+    </nav>
+    <form class="site-search" action="search-results.html" method="get">
+      <label class="visually-hidden" for="site-search-home">Search xBind projects</label>
+      <input id="site-search-home" name="q" type="search" placeholder="Try RNA" required>
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="home-title">
+      <div>
+        <p class="eyebrow">Binding-site prediction workspace</p>
+        <h1 id="home-title">Analyze protein interaction sites</h1>
+        <p>Submit a protein sequence or structure, select a protein, DNA, or RNA partner, and review residue-level binding probabilities in one project workspace.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="add-project.html">Create a project</a>
+          <a class="button button-secondary" href="projects.html">View projects</a>
+        </div>
+      </div>
+      <!-- Original schematic created for this course scaffold; no external source. -->
+      <img class="hero-image" src="images/protein-complex.svg" alt="Simplified protein and RNA complex schematic">
+    </section>
+
+    <section aria-labelledby="recent-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">Workspace</p><h2 id="recent-title">Recent projects</h2></div>
+        <a href="projects.html">See all projects</a>
+      </div>
+      <div class="card-grid" aria-label="Three recent projects">
+        <article class="project-card">
+          <span class="status status-complete">Complete</span>
+          <h3>RNA-binding pilot</h3>
+          <p>Predicted RNA-contact residues for ribosomal protein S7.</p>
+          <a href="detail.html">Open project</a>
+        </article>
+        <article class="project-card">
+          <span class="status status-running">Running</span>
+          <h3>DNA interface test</h3>
+          <p>Evaluating a DNA-binding domain with the default model.</p>
+          <a href="projects.html">View status</a>
+        </article>
+        <article class="project-card">
+          <span class="status status-queued">Queued</span>
+          <h3>Protein partner scan</h3>
+          <p>Comparing candidate protein-binding regions at two thresholds.</p>
+          <a href="projects.html">View status</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="steps" aria-labelledby="steps-title">
+      <p class="eyebrow">Quick start</p><h2 id="steps-title">Prediction workflow</h2>
+      <ol>
+        <li><strong>Provide input.</strong> Paste a sequence or upload a structure.</li>
+        <li><strong>Select a partner.</strong> Choose protein, DNA, or RNA.</li>
+        <li><strong>Review results.</strong> Inspect residues, probabilities, and structure.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>xBind</strong> · Research prototype for binding-site prediction</p>
+    <p>Questions? <a href="mailto:xbind-support@example.edu">Contact support</a></p>
+  </footer>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

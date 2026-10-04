@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RNA-binding pilot prediction results">
+  <title>xBind | RNA-binding pilot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><a class="brand" href="index.html">xBind</a><nav class="primary-nav" aria-label="Primary navigation"><ul>
+    <li><a href="index.html">Home</a></li><li><a aria-current="page" href="projects.html">Projects</a></li><li><a href="add-project.html">New project</a></li><li class="account-summary"><span aria-label="Signed in as Xinyu Wang, researcher">Xinyu Wang · Researcher</span></li>
+  </ul></nav><form class="site-search" action="search-results.html" method="get"><label class="visually-hidden" for="site-search-detail">Search xBind projects</label><input id="site-search-detail" name="q" type="search" placeholder="Try RNA" required><button type="submit">Search</button></form></header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="projects.html">Projects</a><span aria-hidden="true">/</span><span>RNA-binding pilot</span></nav>
+    <div class="page-heading"><div><p class="eyebrow">Completed prediction</p><h1>RNA-binding pilot</h1><p>Ribosomal protein S7 evaluated against an RNA interaction partner.</p></div><div class="button-row"><a class="button button-secondary" href="projects.html">Back to projects</a><a class="button button-primary" href="analysis.html">Interactive analysis</a></div></div>
+
+    <div class="detail-grid">
+      <aside class="panel" aria-labelledby="summary-title"><h2 id="summary-title">Project summary</h2><dl class="metadata"><div><dt>Status</dt><dd>Complete</dd></div><div><dt>Partner</dt><dd>RNA</dd></div><div><dt>Input</dt><dd>structure_01.pdb</dd></div><div><dt>Threshold</dt><dd>0.50</dd></div><div><dt>Visibility</dt><dd>RNA Lab</dd></div></dl></aside>
+      <section class="panel" aria-labelledby="result-title"><h2 id="result-title">Prediction result</h2><p>Twelve residues exceed the current probability threshold. The strongest region spans residues 42-67.</p><p class="helper-text"><strong>How to read this:</strong> taller bars indicate residues the model predicts are more likely to contact RNA. These probabilities are predictions, not experimental measurements.</p><!-- Original schematic created for this course project; no external source. --><img class="result-image" src="images/sequence-map.svg" alt="Residue probability map with highlighted predicted RNA-binding sites"><a href="analysis.html">Adjust the probability threshold</a></section>
+    </div>
+
+    <section class="panel" aria-labelledby="annotations-title"><h2 id="annotations-title">Sequence annotation</h2><p class="sequence" aria-label="Protein sequence with predicted residues highlighted">MARGKKIGYS <mark>PRKGTGRKGT</mark> AAKDAVEAAG VEVEVKPAND <mark>VVRVRTPRHV</mark> DHDEN</p><p><mark>Highlighted residues</mark> have predicted binding probabilities above 0.50.</p></section>
+
+    <section class="panel" aria-labelledby="comments-title"><h2 id="comments-title">Notes and comments</h2><article class="comment"><div class="comment-heading"><h3>Xinyu Wang</h3><div><a href="#comment">Edit</a> · <a href="#comment">Delete</a></div></div><p>Residues near the RNA-facing surface have the strongest scores. Compare the 0.50 and 0.70 thresholds before exporting.</p></article><form class="comment-form" action="detail.html" method="get"><div class="field"><label for="comment">Add a comment</label><textarea id="comment" name="comment" rows="4" required placeholder="Share a note with collaborators"></textarea><span class="helper-text">Enter a comment before posting.</span></div><button type="submit">Post comment</button></form></section>
+  </main>
+  <footer class="site-footer"><p><strong>xBind</strong> · Research prototype for binding-site prediction</p><p>Questions? <a href="mailto:xbind-support@example.edu">Contact support</a></p></footer>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

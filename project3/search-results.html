@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simulated xBind search results">
+  <title>xBind | Search results</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="xBind home">xBind</a>
+    <nav class="primary-nav" aria-label="Primary navigation"><ul>
+      <li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="add-project.html">New project</a></li><li class="account-summary"><span aria-label="Signed in as Xinyu Wang, researcher">Xinyu Wang · Researcher</span></li>
+    </ul></nav>
+    <form class="site-search" action="search-results.html" method="get">
+      <label class="visually-hidden" for="site-search-results">Search xBind projects</label>
+      <input id="site-search-results" name="q" type="search" placeholder="Try RNA" required>
+      <button type="submit">Search</button>
+    </form>
+  </header>
+  <main id="main-content">
+    <div class="page-heading"><div><p class="eyebrow">Simulated site search</p><h1>Search results</h1><p id="search-summary">Reading your search phrase...</p></div></div>
+    <section id="search-output" aria-live="polite" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+    </section>
+  </main>
+  <footer class="site-footer"><p><strong>xBind</strong> · Research prototype for binding-site prediction</p><p>Questions? <a href="mailto:xbind-support@example.edu">Contact support</a></p></footer>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

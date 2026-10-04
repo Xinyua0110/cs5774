@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive analysis state for an xBind project">
+  <title>xBind | Interactive analysis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><a class="brand" href="index.html">xBind</a><nav class="primary-nav" aria-label="Primary navigation"><ul>
+    <li><a href="index.html">Home</a></li><li><a aria-current="page" href="projects.html">Projects</a></li><li><a href="add-project.html">New project</a></li><li class="account-summary"><span aria-label="Signed in as Xinyu Wang, researcher">Xinyu Wang · Researcher</span></li>
+  </ul></nav><form class="site-search" action="search-results.html" method="get"><label class="visually-hidden" for="site-search-analysis">Search xBind projects</label><input id="site-search-analysis" name="q" type="search" placeholder="Try RNA" required><button type="submit">Search</button></form></header>
+
+  <main id="main-content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="projects.html">Projects</a><span aria-hidden="true">/</span><a href="detail.html">RNA-binding pilot</a><span aria-hidden="true">/</span><span>Analysis</span></nav>
+    <div class="page-heading"><div><p class="eyebrow">Interactive analysis mode</p><h1>RNA-binding pilot: binding residues</h1><p>Threshold set to 0.70. Twelve residues remain visible.</p></div><a class="button button-secondary" href="detail.html">Back to project</a></div>
+
+    <form class="threshold-panel" action="analysis.html" method="get"><div class="field field-wide"><label for="analysis-threshold">Probability threshold: <output for="analysis-threshold">0.70</output></label><input id="analysis-threshold" name="threshold" type="range" min="0" max="1" step="0.05" value="0.70" aria-describedby="threshold-help"><span id="threshold-help" class="helper-text">Release the slider to update the structure and residue summary.</span></div><button type="submit">Apply value</button></form>
+
+    <div class="analysis-grid">
+      <section class="panel structure-panel" aria-labelledby="structure-title"><h2 id="structure-title">Structure view at threshold 0.70</h2><div class="structure-placeholder" role="img" aria-label="Placeholder for a rotatable protein and RNA structure"><img src="images/protein-complex.svg" alt="Predicted protein and RNA complex with binding region emphasized"></div><p class="structure-instruction">Select a residue in the table to locate it in the structure.</p></section>
+      <section class="panel" aria-labelledby="residue-title"><h2 id="residue-title">12 residues above 0.70</h2><div class="table-wrap residue-table"><table><thead><tr><th scope="col">Residue</th><th scope="col">Probability</th><th scope="col">Action</th></tr></thead><tbody><tr><th scope="row">ARG 42</th><td>0.94</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">LYS 67</th><td>0.89</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">TYR 103</th><td>0.84</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">GLN 118</th><td>0.78</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">LYS 144</th><td>0.73</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">ARG 151</th><td>0.72</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">HIS 163</th><td>0.72</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">ASN 166</th><td>0.71</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">LYS 170</th><td>0.71</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">ARG 174</th><td>0.71</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">SER 181</th><td>0.70</td><td><a href="#structure-title">Highlight</a></td></tr><tr><th scope="row">GLN 187</th><td>0.70</td><td><a href="#structure-title">Highlight</a></td></tr></tbody></table></div><p class="helper-text">If no residues meet a selected threshold, xBind displays a message suggesting a lower value instead of an empty structure.</p></section>
+    </div>
+  </main>
+  <footer class="site-footer"><p><strong>xBind</strong> · Research prototype for binding-site prediction</p><p>Questions? <a href="mailto:xbind-support@example.edu">Contact support</a></p></footer>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

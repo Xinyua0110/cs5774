@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create a new xBind prediction project">
+  <title>xBind | New project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><a class="brand" href="index.html">xBind</a><nav class="primary-nav" aria-label="Primary navigation"><ul>
+    <li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><a aria-current="page" href="add-project.html">New project</a></li><li class="account-summary"><span aria-label="Signed in as Xinyu Wang, researcher">Xinyu Wang · Researcher</span></li>
+  </ul></nav><form class="site-search" action="search-results.html" method="get"><label class="visually-hidden" for="site-search-add">Search xBind projects</label><input id="site-search-add" name="q" type="search" placeholder="Try RNA" required><button type="submit">Search</button></form></header>
+
+  <main id="main-content" class="form-page">
+    <div class="page-heading"><div><p class="eyebrow">New prediction</p><h1>Create a project</h1><p>Required fields are marked with an asterisk.</p></div></div>
+    <form class="project-form" action="detail.html" method="get">
+      <fieldset><legend>1. Project information</legend><div class="form-grid"><div class="field"><label for="project-name">Project name *</label><input id="project-name" name="project-name" type="text" required minlength="3" maxlength="80" aria-describedby="name-help"><span id="name-help" class="helper-text">Use 3-80 characters.</span></div><div class="field"><label for="description">Description</label><textarea id="description" name="description" rows="3" maxlength="300"></textarea></div></div></fieldset>
+      <fieldset class="molecular-input"><legend>2. Molecular input</legend><div class="field"><span class="label-text">Input method *</span><div class="choice-row"><label><input id="method-sequence" type="radio" name="input-method" value="sequence" checked> Paste sequence</label><label><input id="method-file" type="radio" name="input-method" value="structure"> Upload structure</label></div></div><div class="field sequence-input"><label for="sequence">Protein sequence *</label><textarea id="sequence" name="sequence" rows="6" placeholder="Paste a protein sequence using one-letter amino acid codes" aria-describedby="sequence-help"></textarea><span id="sequence-help" class="helper-text">Letters A-Z only; spaces and line breaks are accepted.</span></div><div class="field file-input"><label for="structure-file">Structure file *</label><input id="structure-file" name="structure-file" type="file" accept=".pdb,.cif" aria-describedby="file-help"><span id="file-help" class="helper-text">Accepted formats: PDB or mmCIF. Maximum file size: 20 MB.</span></div></fieldset>
+      <fieldset><legend>3. Interaction partner</legend><div class="choice-row"><label><input type="radio" name="partner" value="protein"> Protein</label><label><input type="radio" name="partner" value="dna"> DNA</label><label><input type="radio" name="partner" value="rna" checked> RNA</label></div></fieldset>
+      <fieldset><legend>4. Prediction settings</legend><div class="form-grid"><div class="field"><label for="model">Model</label><select id="model" name="model"><option>Recommended model</option><option>Sequence-only model</option><option>Structure-aware model</option></select></div><div class="field"><label for="threshold">Probability threshold</label><input id="threshold" name="threshold" type="number" min="0" max="1" step="0.05" value="0.50"></div></div></fieldset>
+      <fieldset><legend>5. Sharing</legend><div class="choice-stack"><label><input type="radio" name="sharing" value="private" checked> Private to me</label><label><input type="radio" name="sharing" value="group"> Share with my research group</label><label><input type="checkbox" name="notify"> Email me when the prediction is complete</label></div></fieldset>
+      <div class="notice" role="status"><strong>What happens next?</strong> After creation, the project appears in Projects with a Queued or Running status. You can leave the page and return later.</div><div class="form-actions"><a class="button button-secondary" href="projects.html">Cancel</a><button type="submit">Create project</button></div>
+    </form>
+  </main>
+  <footer class="site-footer"><p><strong>xBind</strong> · Research prototype for binding-site prediction</p><p>Questions? <a href="mailto:xbind-support@example.edu">Contact support</a></p></footer>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
